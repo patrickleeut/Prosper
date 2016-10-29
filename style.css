@@ -1,0 +1,15 @@
+body, html{
+	margin:0px;
+	padding:0px;
+}
+
+#test{
+	height:800px;
+	width:700px;
+	margin: 0 auto;
+	background-color: #000;
+}
+
+#test p{
+	margin:0;
+}
