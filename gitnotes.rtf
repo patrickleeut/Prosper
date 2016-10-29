@@ -1,0 +1,107 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;\csgray\c100000;}
+\margl1440\margr1440\vieww14200\viewh16580\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Not very organized, but similar topics are organized by lines. \
+\
+START THE PROJECT/CREATE REPOS:\
+1. You can either use \'93git clone [link]\'94 which is cloning an existing repo on github\
+2. create a new local repo - inside a project folder, with \'93git init [projectname]\'94 which means you already have a couple of program files - when you\'92re starting a project locally. \'93git init\'94 = creates a new git repo inside a directory, so you\'92d create a new directory, cd into it, then use git init for the folder to become the repo. \
+\
+MAKING CHANGES: the steps one should make to make changes to repo\
+first check \'93git status\'94 which lists new modified files that haven\'92t been committed; but you have to be INSIDE the git repo folder, so cd to it first \
+\'93git diff\'94 shows file differences that haven\'92t been committed yet (staged)\
+ADD EXISTING FILES TO NEXT COMMIT:\
+1. git add .  (will add everything)\
+2. git add [path/to/file] (adds specific files only)\
+COMMIT LOCAL SAVED CHANGES-\
+1. git commit -m \'93input message here\'94\
+PUSHING CHANGES - after committing, your changes are now official in your local repo. \'93git push -u origin master\'94\
+\'93git push <remotename> <branchname>\'94 pushes commits on local branch to a remote repo. \
+**What are remotes? If you haven\'92t previously cloned an existing repo from github and want to now connect your repo to a remote server (on github) for the first time, add it with \'93git remote add origin [server]\'94, then push it to the selected server. Remotes are external repo you send your commits to. your local repo must be linked to a remote one to push and pull code. \'93git remote add [remote-name] [domain/repo.git]\
+\
+Branches: new \'93branch\'94 used to develop features isolated from each other. the master branch is the default branch when a repo is created. Other branches can be used for testing/dev and merged back to master after completion. \
+MERGING BRANCHES:\
+Creating branches:\
+1. git branch - lists all local branches in current repo\
+2. git branch [filename] - creates new branch\
+3. \
+Create a new branch and switch to it \
+1. git checkout -b [branch-name\
+switch your current node to another branch\
+1. git checkout [branch-name]\
+merge another branch into a current branch\
+1. git merge [branch-name]\
+\
+after you save a file, use git status to confirm that you\'92ve modified the files. \
+saying git add is telling git you\'92re ready to commit. \'93git add README.md\'94. This confirms the modification and turns green, to show that it is in the staging area and ready to get sent (commit).\
+\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://stackoverflow.com/questions/6143285/git-add-vs-push-vs-commit"}}{\fldrslt \cf0 http://stackoverflow.com/questions/6143285/git-add-vs-push-vs-commit}}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/"}}{\fldrslt \cf0 https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/}}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://ohshitgit.com/"}}{\fldrslt \cf0 http://ohshitgit.com/}}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://kbroman.org/github_tutorial/pages/fork.html"}}{\fldrslt \cf0 http://kbroman.org/github_tutorial/pages/fork.html}}\
+ez series: {\field{\*\fldinst{HYPERLINK "https://www.youtube.com/watch?v=-zvHQXnBO6c"}}{\fldrslt https://www.youtube.com/watch?v=-zvHQXnBO6c}}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://www.dataschool.io/git-quick-reference-for-beginners/"}}{\fldrslt \cf0 http://www.dataschool.io/git-quick-reference-for-beginners/}}\
+{\field{\*\fldinst{HYPERLINK "http://www.dataschool.io/git-quick-reference-for-beginners/"}}{\fldrslt http://www.dataschool.io/git-quick-reference-for-beginners/}}\
+syncing a fork: {\field{\*\fldinst{HYPERLINK "https://help.github.com/articles/syncing-a-fork/"}}{\fldrslt https://help.github.com/articles/syncing-a-fork/}}\
+{\field{\*\fldinst{HYPERLINK "http://rogerdudler.github.io/git-guide/"}}{\fldrslt http://rogerdudler.github.io/git-guide/}}\
+\
+\
+1. git add just adds your file to be committed later in a queue\
+2. commit stores the log as a new \'93version\'94 so to speak \
+\
+git checkout master: switches to branch master\
+\
+git merge branch2 takes the history in branch2 and puts it into branch 1, take the branch 2 commit and added it to branch-one. This modifies the file with content from both files. \
+\
+Updating and publishing to remote repo, like github - we wanna save our repo from local to external \
+1. git pull - means \
+\
+git reset = discards uncommitted changes and returns to previous commit \
+\
+git revert [commit id] - reverts to previous version \
+\
+follow a structured development flow - each one is a folder on github, a different branch (gitflow)\
+1. master branch - what consumer sees, version 1, 2, 2.4, etc. \
+2. hot fixes - fixes needed asap something really urgent that needs fixing. a new branch off of master to address something development can\'92t quick enough. merge hot fix back to master, and become v1.1 \
+3. development - we develop in this branch, create commits, whatever. new branch would be made for each new feature, and when feature is done, merge it back to development. \
+4. QA - if you think development of a feature is done, then send it to QA for testing. \
+\
+git pull - gets the updates - fetching changes online and merging with current directory. this is the command that interacts with the cloud. \
+\
+atlassian has a structured and comprehensive for learning their workflow\
+\
+git documentation\
+\
+HANDLING MERGE CONFLICT: {\field{\*\fldinst{HYPERLINK "https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/"}}{\fldrslt https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/}}\
+\
+HOW TO FORK A REPO - forking is the act of downloading someone else\'92s repo that way you can improve it \
+1. FORK THE REPO you want to modify - this is done on GITHUB, where you make a copy of someone\'92s repo. this repo is now on your github account, but nothing has changed on your local computer \
+2. clone your repo - this is a GIT operation, with command \'93git clone [link]\'94 and the link should be YOUR link. this is getting a local copy of your FORKED copy which exists in your github \
+3. update some files - make some changes in your local repo, or modify the environment \
+4. add/commit changes - this git operation tells git to record the file changes you\'92ve made, and this operation thus far only affects\
+your local computer\
+5. PUSH your changes to your github repo - this is a git operation, using git to broadcast to github that \'93these are the changes\'94 you want to keep. Pushing is manual, so github (the remote server) doesn\'92t know of your commits until you push\
+6. send a pull request to the original repo owner - this is done through github, which you request that X pull from your repo. \
+\
+SYNCING YOUR GITHUB FORK (TO GET THE MAIN REPO\'92S NEWEST VERSION):\
+1. git remote -v \
+2. git remote add upstream [LINK TO THE ORIGINAL DIRECTORY, PATRICK\'92s]\
+3. git remote -v to check if upstream is added\
+4. git fetch upstream \
+5. git merge upstream/master, which merges the change to your master branch \
+6. git push origin master\
+\
+\
+\
+}
