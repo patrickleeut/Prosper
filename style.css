@@ -1,15 +1,28 @@
+@font-face{
+	font-family:'open-sans';
+	src: url(font/open-sans/OpenSans-Regular.ttf);	
+	}
 body, html{
 	margin:0px;
 	padding:0px;
+	background-color: #f9f9f9;
+	font-family:'open-sans';
 }
+#header{
+	max-width:1200px;
+	padding:0;
+	background-color:#090;
+	margin:0 auto;
+	
+	}
+#header-links{
+	text-align:center;
+	padding:0;
+	margin:40px 0 0 0;
+	}
+#header-links li{
+	list-style:none;
+	display:inline;
+	margin:0 40px;
+	}
 
-#test{
-	height:800px;
-	width:700px;
-	margin: 0 auto;
-	background-color: #000;
-}
-
-#test p{
-	margin:0;
-}
